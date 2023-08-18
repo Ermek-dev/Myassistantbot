@@ -6,11 +6,6 @@ import config
 bot = telebot.TeleBot(config.TOKEN)
 
 
-  # Создание внутренней клавиатуры с кнопкой "Помощь"
-help_button = telebot.types.KeyboardButton("❓ Помощь")
-internal_keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
-internal_keyboard.add(help_button)
-
 
 # Обработчик команды /start
 @bot.message_handler(commands=['start'])
