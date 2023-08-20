@@ -48,13 +48,22 @@ def bot_message(message):
             menu_markup = types.InlineKeyboardMarkup().add(menu_button)
             bot.send_message(message.chat.id,"Вы переходит на сайт",reply_markup=menu_markup)
             
+        elif message.text == '🎉 Афиша':
+            afisha_button = types.InlineKeyboardButton('🎉 Афиша', url="https://sxodim.com/almaty/place/paulaner-braeuhaus-almaty")
+            afisha_markup = types.InlineKeyboardMarkup().add(afisha_button)
+            bot.send_message(message.chat.id,"Вы переходит на сайт",reply_markup=afisha_markup)  
+        
+        elif message.text == '🍽️ Уникальное предложение':
+            special_offer_button = types.InlineKeyboardButton('🍽️ Уникальное предложение', url="https://telegra.ph/Novinki-08-15-3")
+            special_offer_markup = types.InlineKeyboardMarkup().add(special_offer_button)
+            bot.send_message(message.chat.id,"Вы переходит на сайт",reply_markup=special_offer_markup)      
+            
         elif message.text == "📞 Связаться с нами":
             phone_markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
             item1 = types.KeyboardButton('☎️ +77056255111')
             item2 = types.KeyboardButton('☎️ +77711544999')
             back = types.KeyboardButton('⬅️ Назад')
             phone_markup.add(item1, item2, back)
-            
             bot.send_message(message.chat.id, text="Выберите номер телефона:", reply_markup=phone_markup)
 
         elif message.text == '📍 Наш адрес':
@@ -141,6 +150,8 @@ def bot_message(message):
     
             
 bot.polling(none_stop = True)    
+        
+        
         
         
  
