@@ -1,11 +1,10 @@
 import telebot
 from telebot import types
+import config
 
 
-
-TOKEN = '6622103483:AAHXL3PO7gQDYjJJd9OtUHZoeZ-FYXzDkRc'
-
-bot = telebot.TeleBot(TOKEN)
+# Установить токен вашего телеграм-бота
+bot = telebot.TeleBot(config.TOKEN)
 
 # Словарь для хранения состояний пользователей
 user_states = {}
