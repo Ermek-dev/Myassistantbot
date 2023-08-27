@@ -90,7 +90,7 @@ def bot_message(message):
             item3 = types.KeyboardButton('🔧 Процесс пивоварения')
             item4 = types.KeyboardButton('🍺 Виды пива')
             item5 = types.KeyboardButton('📚 Файлы')
-            item6 = types.KeyboardButton('🔧 Сервис')
+            # item6 = types.KeyboardButton('🔧 Сервис')
             back = types.KeyboardButton('⬅️ Назад')
             markup.add(item1,item2,item3,item4,item5,item6,back)
             
